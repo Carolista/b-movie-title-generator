@@ -1,0 +1,20 @@
+{
+  "name": "b-movie-title-generator",
+  "version": "1.0.0",
+  "description": "a silly project for a friend",
+  "homepage": "https://github.com/Carolista/b-movie-title-generator#readme",
+  "bugs": {
+    "url": "https://github.com/Carolista/b-movie-title-generator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Carolista/b-movie-title-generator.git"
+  },
+  "license": "ISC",
+  "author": "C. R. Jones",
+  "type": "module",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
