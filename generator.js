@@ -145,6 +145,11 @@ const lexicon = {
 		'Man-Beast',
 		'Gargantua',
 		'Poltergeist',
+        'Necromancer',
+        'Vampire',
+        'Werewolf',
+        'Wraith',
+        'Blob',
 	],
 	verbs: [
 		'Ate',
@@ -187,6 +192,7 @@ const lexicon = {
 		'Shadow',
 		'Vengeance',
 		'Ritual',
+        'Blood Oath',
 	],
 	origins: [
 		'Outer Space',
@@ -207,6 +213,8 @@ const lexicon = {
 		'The Core',
 		'The Wasteland',
 		'Sector 9',
+        'The Basement',
+        'The Abandoned Mine',
 	],
 };
 
