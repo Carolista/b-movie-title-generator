@@ -15,6 +15,12 @@ const lexicon = {
 		'Cybernetic',
 		'Cannibal',
 		'Zombie',
+		'Bloody',
+		'Laser-Guided',
+		'Atomic',
+		'Leather-Clad',
+		'Flesh-Eating',
+		'Galactic',
 	],
 	locations: [
 		'Boardwalk',
@@ -30,6 +36,12 @@ const lexicon = {
 		'Outer Space',
 		'The Sewer',
 		'Neon City',
+		'Camp Clearwater',
+		'The Arcade',
+		'Crystal Lake',
+		'The Love Tunnel',
+		'Screaming Woods',
+		'The Drive-In',
 	],
 	archetypes: [
 		'Bimbos',
@@ -45,6 +57,12 @@ const lexicon = {
 		'Co-Eds',
 		'Showgirls',
 		'Prom Queens',
+		'Gymnasts',
+		'Valkyries',
+		'Amazon Women',
+		'Bad Girls',
+		'Roller Derby Queens',
+		'Space Cadets',
 	],
 	creatures: [
 		'Clowns',
@@ -60,6 +78,11 @@ const lexicon = {
 		'Gators',
 		'Mummies',
 		'Gremlins',
+		'Chupacabras',
+		'Crab Monsters',
+		'Slug-People',
+		'Ant-Mutants',
+		'Sea Serpents',
 	],
 	fantasyConcepts: [
 		'Séance',
@@ -73,6 +96,14 @@ const lexicon = {
 		'Poltergeist',
 		'Sorcery',
 		'Demonic Possession',
+		'Doomsday Device',
+		'Time Warp',
+		'Occult Rite',
+		'Mind Control',
+		'Psychic Scream',
+		'Ancient Prophecy',
+		'Spectral Vision',
+		'Cosmic Horror',
 	],
 	actions: [
 		'Massacre',
@@ -88,6 +119,11 @@ const lexicon = {
 		'Nightmare',
 		'Haunting',
 		'Bloodbath',
+		'Annihilation',
+		'Slaughterfest',
+		'Frenzy',
+		'Catastrophe',
+		'Armageddon',
 	],
 	monsters: [
 		'Mutant',
@@ -103,6 +139,12 @@ const lexicon = {
 		'Slasher',
 		'Phantom',
 		'Beast',
+		'Nightmare',
+		'Leviathan',
+		'Specter',
+		'Man-Beast',
+		'Gargantua',
+		'Poltergeist',
 	],
 	verbs: [
 		'Ate',
@@ -118,6 +160,11 @@ const lexicon = {
 		'Mutilated',
 		'Stalked',
 		'Annihilated',
+		'Obliterated',
+		'Decimated',
+		'Slaughtered',
+		'Wrecked',
+		'Desecrated',
 	],
 	nouns: [
 		'Revenge',
@@ -134,6 +181,12 @@ const lexicon = {
 		'Lair',
 		'Cult',
 		'Tomb',
+		'Lust',
+		'Domain',
+		'Reckoning',
+		'Shadow',
+		'Vengeance',
+		'Ritual',
 	],
 	origins: [
 		'Outer Space',
@@ -149,6 +202,11 @@ const lexicon = {
 		'The Dark',
 		'The Lab',
 		'The Toxic Dump',
+		'The Bermuda Triangle',
+		'The Abyss',
+		'The Core',
+		'The Wasteland',
+		'Sector 9',
 	],
 };
 
@@ -200,9 +258,9 @@ const patterns = [
 	data =>
 		`${getRandomElement(data.descriptors)} Vixens of ${getRandomElement(data.locations)}`,
 
-	// [Creature]s vs. [Archetype]s
+	// [Creature]s vs. [Archetype]s [Number]
 	data =>
-		`${getRandomElement(data.descriptors)} ${getRandomElement(data.creatures)} vs. The ${getRandomElement(data.archetypes)}`,
+		`${getRandomElement(data.descriptors)} ${getRandomElement(data.creatures)} vs. The ${getRandomElement(data.archetypes)}${getRandomSequel()}`,
 ];
 
 export default function generateBTitle(wordBank = lexicon) {
