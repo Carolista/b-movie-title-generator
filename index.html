@@ -7,24 +7,23 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@400;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@400;700&family=Bebas+Neue&display=swap"
 			rel="stylesheet" />
 		<link href="styles.css" rel="stylesheet" />
 		<script src="script.js" type="module" defer></script>
 	</head>
 	<body>
 		<main class="container">
-			<h1 class="title">B-Movie Title Generator</h1>
-
-			<button id="generate-btn" type="button" class="slasher-btn">
-				Generate Drive-In Feature Film
-			</button>
-
 			<div class="output-box">
-				<span class="label">Now Showing:</span>
-				<p id="movie-title" class="result">
-					Click the button to roll a title...
-				</p>
+				<div class="marquee-text">
+					<p>
+						<span id="now-playing">NOW PLAYING:</span><br />
+						<span id="movie-title" class="result">Coming soon!</span>
+					</p>
+				</div>
+				<button id="generate-btn" type="button" class="generate-btn">
+					Update Marquee
+				</button>
 			</div>
 		</main>
 	</body>

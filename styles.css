@@ -1,98 +1,108 @@
-/* Reset & Base Styles */
+:root {
+	--white: #fff;
+	--light-gray: #ccc;
+	--gray: #bbb;
+	--dim-gray: #555;
+	--black: #000;
+}
+
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  background-color: #080808;
-  color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 1.5rem;
+	background-color: var(--black);
+	background-image: url('./images/starry-sky.jpg');
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	color: #ffffff;
+	font-family: 'Montserrat', sans-serif;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	text-align: center;
+	padding: 1.5rem 1.5rem 0;
 }
 
-/* Centered Container */
+main {
+	align-items: center;
+	justify-content: flex-end;
+	gap: 5rem;
+	max-width: 1200px;
+	min-height: 100%;
+	width: 100%;
+}
+
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  max-width: 650px;
-  width: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
-/* Horror Display Title */
-.title {
-  font-family: 'Creepster', cursive;
-  font-size: 3.5rem;
-  color: #d60000;
-  letter-spacing: 2px;
-  text-shadow: 0 0 10px rgba(214, 0, 0, 0.6), 2px 2px 0px #000;
-}
-
-/* Button Styling */
-.slasher-btn {
-  background-color: #900000;
-  color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 0.9rem 1.8rem;
-  border: 2px solid #ff1e1e;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 0 4px 15px rgba(144, 0, 0, 0.4);
-}
-
-.slasher-btn:hover {
-  background-color: #d60000;
-  border-color: #ffffff;
-  box-shadow: 0 0 20px rgba(214, 0, 0, 0.8);
-  transform: translateY(-2px);
-}
-
-.slasher-btn:active {
-  transform: translateY(1px);
-  box-shadow: 0 2px 8px rgba(144, 0, 0, 0.4);
-}
-
-/* Output Display Box */
 .output-box {
-  background: rgba(20, 20, 20, 0.8);
-  border: 1px solid #333;
-  border-left: 4px solid #d60000;
-  padding: 1.5rem 2rem;
-  width: 100%;
-  border-radius: 4px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+    position: relative;
+	container-type: inline-size;
+	background-image: url('./images/dmitri-drive-in-marquee.png');
+	background-size: 100% 100%;
+	border: none;
+	width: min(1000px, 95vw, calc((100vh - 1.5rem) * 1000 / 741));
+	aspect-ratio: 1000 / 741;
+	border-radius: 4px;
 }
 
-.label {
-  display: block;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #888;
-  margin-bottom: 0.5rem;
+.marquee-text {
+    width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	font-family: 'Bebas Neue', sans;
+	font-size: 6.08cqw;
+	font-weight: 700;
+	padding: 30.6cqw 14cqw 2cqw;
+	line-height: 7.1cqw;
+	letter-spacing: 0.96cqw;
+}
+
+#now-playing {
+    color: rgb(116, 6, 6);
 }
 
 .result {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #f5f5f5;
-  min-height: 2.5rem; /* Prevents vertical jump when text updates */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    color: var(--black);
+}
+
+.generate-btn {
+    position: absolute;
+    bottom: 2cqw;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--black);
+    color: var(--gray);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: clamp(0.7rem, 1.3cqw, 1.3rem);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: clamp(0.45rem, 1.2cqw, 1rem) clamp(0.9rem, 2.4cqw, 1.8rem);
+    border: clamp(1px, 0.18cqw, 2.5px) solid var(--gray);
+    border-radius: 9999px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.generate-btn:hover {
+    color: var(--white);
+    border-color: var(--white);
+    transform: translate(-50%, -2px);
+}
+
+.generate-btn:active {
+    color: var(--light-gray);
+    border-color: var(--light-gray);
+    transform: translate(-50%, 1px);
 }
