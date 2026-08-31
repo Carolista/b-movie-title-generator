@@ -42,6 +42,13 @@ const lexicon = {
 		'The Love Tunnel',
 		'Screaming Woods',
 		'The Drive-In',
+        'Cape Fear',
+        'The Hollow',
+        'Rattlesnake Ranch',
+        'The Abandoned Mine',
+        'The Pit of Despair',
+        'The Fire Swamp',
+        'Siberian Wasteland',
 	],
 	archetypes: [
 		'Bimbos',
@@ -63,6 +70,7 @@ const lexicon = {
 		'Bad Girls',
 		'Roller Derby Queens',
 		'Space Cadets',
+        'Mermaids',
 	],
 	creatures: [
 		'Clowns',
@@ -241,9 +249,9 @@ const patterns = [
 	data =>
 		`${getRandomElement(data.descriptors)} ${getRandomElement(data.archetypes)} from ${getRandomElement(data.locations)}`,
 
-	// [Location] [Archetype]s [Number]
+	// [Location] [Archetype]s
 	data =>
-		`${getRandomElement(data.locations)} ${getRandomElement(data.archetypes)}${getRandomSequel()}`,
+		`${getRandomElement(data.locations)} ${getRandomElement(data.archetypes)}`,
 
 	// [Fantasy Concept] [Archetype]s
 	data =>
@@ -273,12 +281,13 @@ const patterns = [
 	data =>
 		`${getRandomElement(data.descriptors)} Vixens of ${getRandomElement(data.locations)}`,
 
-	// [Creature]s vs. [Archetype]s [Number]
+	// [Creature]s vs. [Archetype]s
 	data =>
-		`${getRandomElement(data.descriptors)} ${getRandomElement(data.creatures)} vs. The ${getRandomElement(data.archetypes)}${getRandomSequel()}`,
+		`${getRandomElement(data.descriptors)} ${getRandomElement(data.creatures)} vs. The ${getRandomElement(data.archetypes)}`,
 ];
 
 export default function generateBTitle(wordBank = lexicon) {
 	const randomPattern = getRandomElement(patterns);
-	return randomPattern(wordBank);
+	const title = randomPattern(wordBank);
+    return Math.random() < 0.75 ? title + getRandomSequel() : title;
 }
