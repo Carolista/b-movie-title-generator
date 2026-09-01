@@ -4,6 +4,9 @@
 	--gray: #bbb;
 	--dim-gray: #555;
 	--black: #000;
+    --dark-red: #740606;
+    --red: #9d1010;
+    --light-red: #be2727;
 }
 
 * {
@@ -42,6 +45,10 @@ main {
 	flex-direction: column;
 }
 
+#instructions {
+    background-color: var(--black);
+}
+
 .output-box {
     position: relative;
 	container-type: inline-size;
@@ -69,7 +76,7 @@ main {
 }
 
 #now-playing {
-    color: rgb(116, 6, 6);
+    color: var(--dark-red);
 }
 
 .result {
@@ -81,28 +88,27 @@ main {
     bottom: 2cqw;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--black);
-    color: var(--gray);
+    background-color: var(--red);
+    color: var(--white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: clamp(0.7rem, 1.3cqw, 1.3rem);
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: clamp(0.45rem, 1.2cqw, 1rem) clamp(0.9rem, 2.4cqw, 1.8rem);
-    border: clamp(1px, 0.18cqw, 2.5px) solid var(--gray);
+    border: none;
     border-radius: 9999px;
     cursor: pointer;
     white-space: nowrap;
 }
 
 .generate-btn:hover {
-    color: var(--white);
-    border-color: var(--white);
+    background-color: var(--light-red);
     transform: translate(-50%, -2px);
 }
 
 .generate-btn:active {
     color: var(--light-gray);
-    border-color: var(--light-gray);
-    transform: translate(-50%, 1px);
+    background-color: var(--dark-red);
+    transform: translate(-50%, -1px);
 }
